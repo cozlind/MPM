@@ -4,7 +4,9 @@ using UnityEngine;
 
 [System.Serializable]
 public class Body{
-    [Header("Body Info")]
+    [Header ("Body Info")]
+    [SerializeField]
+    public static float particleRadius = 0.25f;
     public int num_w;
     public int num_s;
     public int num_b;

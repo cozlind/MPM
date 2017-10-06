@@ -5,7 +5,6 @@ using UnityEngine;
 public class Basic : MonoBehaviour {
 
     private const float timeStep = 1.0f / 60.0f;
-    public float radius = 0.25f;
 
     public bool drawLines = true;
     public bool drawBoundary = false;
@@ -43,9 +42,9 @@ public class Basic : MonoBehaviour {
         SandSpheres = new List<GameObject> ();
         BoundarySpheres = new List<GameObject> ();
 
-        CreateBoundary (radius);
-        CreateWater (radius);
-        CreateSand (radius);
+        CreateBoundary (Body.particleRadius);
+        CreateWater (Body.particleRadius);
+        CreateSand (Body.particleRadius);
 
         body = new Body (WaterSpheres, SandSpheres, BoundarySpheres);
         solver = new Solver (body);
